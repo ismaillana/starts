@@ -46,7 +46,7 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-server me-3"></i>GreenHost</h1>
+                    <h1 class="m-0"><i class="fa fa-server me-3"></i>STARS</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -77,14 +77,14 @@
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5">
                         <div class="col-lg-6 pt-5 text-center text-lg-start">
-                            <h1 class="display-4 text-white mb-4 animated slideInLeft">Shared Hosting</h1>
-                            <p class="text-white animated slideInLeft">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd.</p>
-                            <h1 class="text-white mb-4 animated slideInLeft">
+                            <h3 class="display-4 text-white animated slideInLeft">WELCOME TO "STARS"</h3>
+                            <h5 class="text-white animated slideInLeft mb-4">"Sustainable Health Action For Society"</h5>
+                            <!-- <h1 class="text-white mb-4 animated slideInLeft">
                                 <small class="align-top fw-normal" style="font-size: 15px; line-height: 25px;">Starting:</small>
                                 <span>$2.49</span>
                                 <small class="align-bottom fw-normal" style="font-size: 15px; line-height: 33px;">/ Mo</small>
-                            </h1>
-                            <a href="" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">Get Started Now</a>
+                            </h1> -->
+                            <a href="/register" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">More Info</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <img class="img-fluid animated zoomIn" src="{{ asset('template/assets/img/hero.png')}}" alt="">
@@ -113,7 +113,6 @@
             </div>
         </div>
         <!-- Full Screen Search End -->
-
 
         <!-- Domain Search Start -->
         <div class="container-xxl domain mb-5" style="margin-top: 90px;">

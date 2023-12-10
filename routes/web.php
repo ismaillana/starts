@@ -20,3 +20,15 @@ Route::get('/', function () {
 Route::get('/dashboard-admin', function () {
     return view('layouts/admin/base');
 });
+
+Route::get('/register', function () {
+    return view('/users/register');
+});
+
+Route::get('/animation', function () {
+    return view('/users/animation');
+});
+
+Route::get('/list', function () {
+    return view('/users/list');
+});

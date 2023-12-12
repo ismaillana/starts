@@ -84,7 +84,7 @@
                                 <span>$2.49</span>
                                 <small class="align-bottom fw-normal" style="font-size: 15px; line-height: 33px;">/ Mo</small>
                             </h1> -->
-                            <a href="/register" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">More Info</a>
+                            <a href="/register-user" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">More Info</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <img class="img-fluid animated zoomIn" src="{{ asset('template/assets/img/hero.png')}}" alt="">

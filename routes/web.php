@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MateriController;
+use App\Http\Controllers\SettingController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,11 +22,11 @@ Route::get('/', function () {
     return view('layouts/users/base');
 });
 
-Route::get('/dashboard-admin', function () {
-    return view('layouts/admin/base');
-});
+// Route::get('/dashboard-admin', function () {
+//     return view('layouts/admin/base');
+// });
 
-Route::get('/register', function () {
+Route::get('/register-user', function () {
     return view('/users/register');
 });
 
@@ -39,4 +44,10 @@ Route::get('/login', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard-admin', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard-admin');
+
+Route::resource('pengunjung', UserController::class);
+Route::resource('materi', MateriController::class);
+Route::resource('setting', UserController::class);
+
+

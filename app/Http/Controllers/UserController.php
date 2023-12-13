@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,7 +12,12 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view ('admin.pengunjung.index');
+        $pengunjung = User::all();
+
+        return view ('admin.pengunjung.index', [
+            'pengunjung' => $pengunjung,
+            'title'      => 'Data Pengunjung'
+        ]);
     }
 
     /**
@@ -43,7 +49,11 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $pengunjung = User::find($id);
+        return view ('admin.pengunjung.form', [
+            'pengunjung'   =>  $pengunjung,
+            'title'    => 'Edit Data Pengunjung'
+        ]);
     }
 
     /**
@@ -51,7 +61,16 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = [
+            'name'    =>  $request->name,
+            'email'   =>  $request->email,
+            'age'     =>  $request->age,
+            'gender'  =>  $request->gender
+        ];
+
+        User::where('id', $id)->update($data);
+
+        return redirect()->route('pengunjung.index')->with('success', 'Data Berhasil Diedit');
     }
 
     /**

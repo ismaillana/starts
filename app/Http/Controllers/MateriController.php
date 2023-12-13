@@ -12,7 +12,12 @@ class MateriController extends Controller
      */
     public function index()
     {
-        return view ('admin.materi.index');
+        $materi = Materi::all();
+
+        return view ('admin.materi.index', [
+            'materi' => $materi,
+            'title'  => 'Data Materi'
+        ]);
     }
 
     /**
@@ -20,7 +25,9 @@ class MateriController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.materi.tambah', [
+            'title' => 'Tambah Data Materi'
+        ]);
     }
 
     /**
@@ -28,7 +35,12 @@ class MateriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Materi::create([
+            'title' => $request->title,
+            'link'  => $request->link
+        ]);
+
+        return redirect()->route('materi.index')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -44,7 +56,11 @@ class MateriController extends Controller
      */
     public function edit(Materi $materi)
     {
-        //
+        $materi = Materi::find($id);
+        return view ('admin.materi.edit', [
+            'materi'=> $materi,
+            'title' => 'Edit Data Materi'
+        ]);
     }
 
     /**
@@ -52,7 +68,14 @@ class MateriController extends Controller
      */
     public function update(Request $request, Materi $materi)
     {
-        //
+        $data = [
+            'title'  =>  $request->title,
+            'link'   =>  $request->link
+        ];
+
+        Materi::where('id', $id)->update($data);
+
+        return redirect()->route('materi.index')->with('success', 'Data Berhasil Diedit');   
     }
 
     /**
@@ -60,6 +83,10 @@ class MateriController extends Controller
      */
     public function destroy(Materi $materi)
     {
-        //
+        $materi = Materi::find($id);
+
+        $materi->delete();
+
+        return response()->json(['status' => 'Data Berhasil Dihapus']);
     }
 }

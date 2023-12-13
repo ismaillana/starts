@@ -28,7 +28,12 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <!-- <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title> -->
+    @hasSection('title')
+            <title>@yield('title')</title>
+    @else
+            <title>{{ $title ?? config('app.name') }}</title>
+    @endif
 
     <meta name="description" content="" />
 
@@ -196,22 +201,10 @@
                 <i class="bx bx-menu bx-sm"></i>
               </a>
             </div>
+            @guest
 
+            @else
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
-                  <i class="bx bx-search fs-4 lh-0"></i>
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none"
-                    placeholder="Search..."
-                    aria-label="Search..."
-                  />
-                </div>
-              </div>
-              <!-- /Search -->
-
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <!-- Place this tag where you want the button to render. -->
                 <li class="nav-item lh-1 me-3">
@@ -222,7 +215,7 @@
                     data-size="large"
                     data-show-count="true"
                     aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-                    >Star</a
+                    >STARS</a
                   >
                 </li>
 
@@ -243,7 +236,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
+                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
@@ -277,16 +270,22 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      <a class="dropdown-item" href="{{ route('logout') }}" 
+                      onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
                       </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                     </li>
                   </ul>
                 </li>
                 <!--/ User -->
               </ul>
             </div>
+            @endguest
           </nav>
 
           <!-- / Navbar -->
@@ -306,9 +305,9 @@
                     document.write(new Date().getFullYear());
                   </script>
                   , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">Subang Tech</a>
                 </div>
-                <div>
+                <!-- <div>
                   <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
                   <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
 
@@ -325,7 +324,7 @@
                     class="footer-link me-4"
                     >Support</a
                   >
-                </div>
+                </div> -->
               </div>
             </footer>
             <!-- / Footer -->

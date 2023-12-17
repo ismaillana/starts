@@ -68,6 +68,9 @@
             <div class="container-xxl py-5 bg-primary hero-header mb-5">
                 <div class="container my-5 px-lg-5">
                     <div class="row g-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid animated zoomIn" src="{{ asset('template/assets/img/logo sekolah.png')}}" alt="" width="400px">
+                        </div>
                         <div class="col-lg-6 pt-5 text-center text-lg-start">
                             <h3 class="display-4 text-white animated slideInLeft">WELCOME TO "STARS"</h3>
                             <h5 class="text-white animated slideInLeft mb-4">"Sustainable Health Action For Society"</h5>
@@ -77,9 +80,6 @@
                                 <small class="align-bottom fw-normal" style="font-size: 15px; line-height: 33px;">/ Mo</small>
                             </h1> -->
                             <a href="{{ route ('register-user')}}" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">More Info</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="{{ asset('template/assets/img/hero.png')}}" alt="">
                         </div>
                     </div>
                 </div>
@@ -100,22 +100,15 @@
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="bg-light rounded text-center p-4">
                                     <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                    <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                    <h2 class="mb-1" data-toggle="counter-up">{{$user}}</h2>
                                     <p class="mb-0">Pengunjung</p>
                                 </div>
                             </div>
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="bg-light rounded text-center p-4">
                                     <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                    <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                    <h2 class="mb-1" data-toggle="counter-up">{{$materi}}</h2>
                                     <p class="mb-0">Materi</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="bg-light rounded text-center p-4">
-                                    <i class="fa fa-check fa-2x text-primary mb-2"></i>
-                                    <h2 class="mb-1" data-toggle="counter-up">1234</h2>
-                                    <p class="mb-0">Projects</p>
                                 </div>
                             </div>
                         </div>
@@ -134,19 +127,16 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                            &copy; <a class="border-bottom" href="/">STARS</a>, All Right Reserved. 
+                            
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="#">Subang Tech</a>
                             </br>
-                            Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                            Distributed By <a class="border-bottom" href="#" target="_blank">Subang Tech</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a href="/">Home</a>
                             </div>
                         </div>
                     </div>

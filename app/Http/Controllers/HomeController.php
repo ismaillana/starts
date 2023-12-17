@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materi;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $user = User::WhereNot('id', 1)->count();
+        $materi = Materi::count();
+
         return view('admin.dashboard', [
+            'user' => $user,
+            'materi' => $materi,
             'title' => 'Dashboard || Admin STARS'
         ]);
     }

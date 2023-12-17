@@ -19,7 +19,7 @@
       </div>
       <div class="card-body">
         <div class="table-responsive text-nowrap">
-          <table class="table">
+          <table id="myTable" class="table" style="width: 100%" >
             <thead class="table-light">
               <tr>
                 <th>#</th>
@@ -31,7 +31,7 @@
             <tbody class="table-border-bottom-0">
               @forelse ($materi as $item)
                 <tr>
-                  <td>
+                  <td style="width: 20px">
                       {{$loop->iteration}}
                   </td>
                   <td>
@@ -40,7 +40,7 @@
                   <td>
                       <a href="{{$item->link}}" target="_blank">Link Drive</a>
                   </td>
-                  <td>
+                  <td style="width: 10px">
                     <div class="dropdown">
                       <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                         <i class="bx bx-dots-vertical-rounded"></i>

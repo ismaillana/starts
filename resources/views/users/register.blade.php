@@ -53,8 +53,10 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
                             <div class="section-title position-relative text-center mx-auto mb-4 pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                                <h1 class="mb-3">Search Your Domain</h1>
-                                <p class="mb-1">Vero justo sed sed vero clita amet. Et justo vero sea diam elitr amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero elitr sit clita.</p>
+                                <h1 class="mb-3">Your Identity</h1>
+                                <p class="mb-1">
+                                    Enter your identity data to access other menus on this website, data for visitor data recording purposes only.
+                                </p>
                             </div>
                             <div class="position-relative w-100 my-3 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="border-top bg-light rounded border-5 border-secondary shadow">
@@ -127,19 +129,16 @@
                     <div class="copyright">
                         <div class="row">
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                                &copy; <a class="border-bottom" href="/">STARS</a>, All Right Reserved. 
                                 
                                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                                Designed By <a class="border-bottom" href="#">Subang Tech</a>
                                 </br>
-                                Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                                Distributed By <a class="border-bottom" href="#" target="_blank">Subang Tech</a>
                             </div>
                             <div class="col-md-6 text-center text-md-end">
                                 <div class="footer-menu">
-                                    <a href="">Home</a>
-                                    <a href="">Cookies</a>
-                                    <a href="">Help</a>
-                                    <a href="">FQAs</a>
+                                    <a href="/">Home</a>
                                 </div>
                             </div>
                         </div>

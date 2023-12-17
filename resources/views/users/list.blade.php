@@ -51,18 +51,17 @@
             <div class="container-xxl py-5 bg-primary hero-header mb-5">
                 <div class="container px-lg-5">
                     <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                        <h1 class="mb-3">Our Hosting Plans</h1>
-                        <p class="mb-1">Vero justo sed sed vero clita amet. Et justo vero sea diam elitr amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero elitr sit clita.</p>
+                        <h1 class="mb-3">What's Your Problem ?</h1>
+                        <p class="mb-1">Let's get to know more about problems surrounding dental health.</p>
                     </div>
                     <div class="row gy-5 gx-4 justify-content-center align-items-center">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                             <div class="bg-light position-relative shadow rounded border-top border-5 border-secondary">
                                 <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle bg-secondary rounded-circle" style="width: 45px; height: 45px; margin-top: -3px;">
                                     <i class="fa fa-server text-white"></i>
                                 </div>
                                 <div class="text-center border-bottom p-4 pt-5">
-                                    <h4 class="fw-bold">VPS Hosting</h4>
-                                    <p class="mb-0">Eirmod erat dolor amet est clita lorem erat justo rebum elitr eos</p>
+                                    <p class="mb-0">Let's find out!</p>
                                 </div>
                                 
                                 <div class="p-4">
@@ -79,7 +78,6 @@
                                 </div>
 
                                 <div class="text-center border-bottom p-4">
-                                    <p class="text-primary mb-1">Latest Offer - <strong>Save 30%</strong></p>
                                     <a class="btn btn-secondary px-4 py-2" href="{{ route ('inovation')}}">Next</a>
                                 </div>
                             </div>
@@ -94,19 +92,16 @@
                     <div class="copyright">
                         <div class="row">
                             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                                &copy; <a class="border-bottom" href="/">STARS</a>, All Right Reserved. 
                                 
                                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                                Designed By <a class="border-bottom" href="#">Subang Tech</a>
                                 </br>
-                                Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                                Distributed By <a class="border-bottom" href="#" target="_blank">Subang Tech</a>
                             </div>
                             <div class="col-md-6 text-center text-md-end">
                                 <div class="footer-menu">
-                                    <a href="">Home</a>
-                                    <a href="">Cookies</a>
-                                    <a href="">Help</a>
-                                    <a href="">FQAs</a>
+                                    <a href="/">Home</a>
                                 </div>
                             </div>
                         </div>

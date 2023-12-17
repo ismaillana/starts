@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\User;
+use App\Models\Materi;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MateriController;
 use App\Http\Controllers\SettingController;
@@ -19,30 +21,16 @@ use App\Http\Controllers\SettingController;
 */
 
 Route::get('/', function () {
+    $user = User::WhereNot('id', 1)->count();
+    $materi = Materi::count();
+
     return view('layouts/users/base' , [
+        'user' => $user,
+        'materi' => $materi,
         'title' => 'STARS || Home'
     ]);
 });
 
-// Route::get('/dashboard-admin', function () {
-//     return view('layouts/admin/base');
-// });
-
-// Route::get('/register-user', function () {
-//     return view('/users/register');
-// });
-
-// Route::get('/animation', function () {
-//     return view('/users/animation');
-// });
-
-Route::get('/list', function () {
-    return view('/users/list');
-});
-
-// Route::get('/login', function () {
-//     return view('/auth/login1');
-// });
 Route::get('/register-user', [App\Http\Controllers\UserController::class, 'create'])->name('register-user');
 Route::post('/create-pengunjung', [App\Http\Controllers\UserController::class, 'storePengunjung'])->name('create-pengunjung');
 
@@ -59,6 +47,5 @@ Route::get('/dashboard-admin', [App\Http\Controllers\HomeController::class, 'ind
 
 Route::resource('pengunjung', UserController::class);
 Route::resource('materi', MateriController::class);
-Route::resource('setting', UserController::class);
 
 

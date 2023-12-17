@@ -35,6 +35,14 @@ class MateriController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title'           => 'required',
+            'link'            => 'required',
+        ], [
+            'title.required'       => 'Title Wajib Diisi',
+            'link.required'        => 'Link Wajib Diisi',
+        ]);
+
         Materi::create([
             'title' => $request->title,
             'link'  => $request->link
@@ -46,7 +54,7 @@ class MateriController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Materi $materi)
+    public function show(string $id)
     {
         //
     }
@@ -54,7 +62,7 @@ class MateriController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Materi $materi)
+    public function edit(string $id)
     {
         $materi = Materi::find($id);
         return view ('admin.materi.edit', [
@@ -66,8 +74,16 @@ class MateriController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Materi $materi)
+    public function update(Request $request, string $id)
     {
+        $request->validate([
+            'title'           => 'required',
+            'link'            => 'required',
+        ], [
+            'title.required'       => 'Title Wajib Diisi',
+            'link.required'        => 'Link Wajib Diisi',
+        ]);
+
         $data = [
             'title'  =>  $request->title,
             'link'   =>  $request->link
@@ -81,7 +97,7 @@ class MateriController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Materi $materi)
+    public function destroy(string $id)
     {
         $materi = Materi::find($id);
 

@@ -12,7 +12,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $pengunjung = User::all();
+        $pengunjung = User::WhereNot('id', 1)->get();
 
         return view ('admin.pengunjung.index', [
             'pengunjung' => $pengunjung,
@@ -25,15 +25,39 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view ('users.register', [
+            'title' => 'STARS || Registrasi Pengunjung'
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function storePengunjung(Request $request)
     {
-        //
+        $request->validate([
+            'name'         => 'required',
+            'email'        => 'required|email',
+            'age'          => 'required',
+            'gender'       => 'required',
+        ], [
+            'name.required'     => 'Nama Wajib Diisi',
+            'email.required'    => 'Alamat Email Wajib Diisi',
+            'email.email'       => 'Inputan Harus Berupa Alamat Email',
+            'age.required'      => 'Usia Wajib Diisi',
+            'gender.required'   => 'Jenis Kelamin Wajib Diisi',
+        ]);
+
+        User::create([
+            'name'    =>  $request->name,
+            'email'   =>  $request->email,
+            'age'     =>  $request->age,
+            'gender'  =>  $request->gender
+        ]);
+
+        // return view ('users.animation');
+        return redirect()->route('animation');
+        // return url ('/animation')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**

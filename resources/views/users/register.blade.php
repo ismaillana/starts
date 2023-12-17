@@ -3,13 +3,18 @@
 
 <head>
     <meta charset="utf-8">
-    <title>GreenHost - Web Hosting HTML Template</title>
+    @hasSection('title')
+            <title>@yield('title')</title>
+    @else
+            <title>{{ $title ?? config('app.name') }}</title>
+    @endif
+    {{-- <title>GreenHost - Web Hosting HTML Template</title> --}}
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset ('template/assets/img/favicon.ico')}}" rel="icon">
+    <link href="{{ asset ('template/assets/img/logo.png')}}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,50 +58,99 @@
                             </div>
                             <div class="position-relative w-100 my-3 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="border-top bg-light rounded border-5 border-secondary shadow">
-                                    <form class="p-4">
+                                    <form id="myForm" class="forms-sample p-4" enctype="multipart/form-data" method="POST" 
+                                    action="{{route('create-pengunjung')}}">
+                                        @csrf
                                         <div class="row g-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                                    <input type="text" class="form-control @error('name')is-invalid @enderror" id="name" name="name" value="{{ old('name', @$pengunjung->name) }}" placeholder="Your Name">
                                                     <label for="name">Your Name</label>
+
+                                                    @if ($errors->has('name'))
+                                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input type="text" class="form-control" id="age" placeholder="Your Age">
+                                                    <input type="text" class="form-control @error('age')is-invalid @enderror" value="{{ old('age', @$pengunjung->age) }}" name="age" id="age" placeholder="Your Age">
                                                     <label for="age">Your Age</label>
+
+                                                    @if ($errors->has('age'))
+                                                        <span class="text-danger">{{ $errors->first('age') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                                    <input type="email" class="form-control @error('email')is-invalid @enderror" value="{{ old('email', @$pengunjung->email) }}" id="email" name="email" placeholder="Your Email">
                                                     <label for="email">Your Email</label>
+
+                                                    @if ($errors->has('email'))
+                                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <select class="form-select" name="gender" id="gender">
-                                                        <option value="">Choice Gender</option>
-                                                        <option value="L">Male</option>
-                                                        <option value="P">Female</option>
+                                                    <select class="form-select @error('gender')is-invalid @enderror" value="{{ old('gender', @$pengunjung->gender) }}" name="gender" id="gender">
+                                                        <option disabled selected>Choice Gender</option>
+                                                        <option value="L"
+                                                            {{ old('gender', @$pengunjung->gender)}}>Male</option>
+                                                        <option value="P"
+                                                            {{ old('gender', @$pengunjung->gender)}}>Female</option>
                                                     </select>
                                                     <label for="gender">Gender</label>
+
+                                                    @if ($errors->has('gender'))
+                                                        <span class="text-danger">{{ $errors->first('gender') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
-                                            <!-- <div class="col-12">
-                                                <button class="btn btn-primary w-100 py-3" type="submit">Register</button>
-                                            </div> -->
+                                            <div class="col-12">
+                                                <button class="btn btn-secondary w-100 py-3" type="submit">Register</button>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <a href="/animation" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">More Info</a>
+                            {{-- <a href="/animation" class="btn btn-secondary py-sm-3 px-sm-5 me-3 animated slideInLeft">More Info</a> --}}
                         </div>
                     </div>
                 </div>
             </div>
+        
+            <!-- Footer Start -->
+            <div class="container-fluid bg-primary text-white footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="container px-lg-5">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                                
+                                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                                Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                                </br>
+                                Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                            </div>
+                            <div class="col-md-6 text-center text-md-end">
+                                <div class="footer-menu">
+                                    <a href="">Home</a>
+                                    <a href="">Cookies</a>
+                                    <a href="">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
         </div>
         <!-- Navbar & Hero End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
     <!-- JavaScript Libraries -->

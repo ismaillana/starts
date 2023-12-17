@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Setting;
+use App\Models\Materi;
 use Illuminate\Http\Request;
 
 class SettingController extends Controller
@@ -61,5 +62,44 @@ class SettingController extends Controller
     public function destroy(Setting $setting)
     {
         //
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function animasi()
+    {
+        return view('users.animation', [
+            'title' => 'STARS || Animation'
+        ]);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function list()
+    {
+        $materi = Materi::get();
+
+        return view('users.list', [
+            'materi'=> $materi,
+            'title' => 'STARS || Materi'
+        ]);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function inovation()
+    {
+        return view('users.inovation', [
+            'title' => 'STARS || Inovation'
+        ]);
     }
 }

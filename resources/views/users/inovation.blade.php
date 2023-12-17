@@ -49,25 +49,37 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0 shadow">
             <div class="container-xxl py-5 bg-primary hero-header mb-5">
-                <div class="container my-5 px-lg-5">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="section-title position-relative text-center mx-auto mb-4 pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                                <h1 class="mb-3">Search Your Domain</h1>
-                                <p class="mb-1">Vero justo sed sed vero clita amet. Et justo vero sea diam elitr amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero elitr sit clita.</p>
+                <div class="container px-lg-5">
+                    <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                        <h1 class="mb-3">Our Hosting Plans</h1>
+                        <p class="mb-1">Vero justo sed sed vero clita amet. Et justo vero sea diam elitr amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero elitr sit clita.</p>
+                    </div>
+                    <div class="row gy-5 gx-4 justify-content-center align-items-center">
+                        <div class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="bg-light position-relative shadow rounded border-top border-5 border-secondary">
+                                <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle bg-secondary rounded-circle" style="width: 45px; height: 45px; margin-top: -3px;">
+                                    <i class="fa fa-server text-white"></i>
+                                </div>
+                                <div class="text-center border-bottom p-4 pt-5">
+                                    <h4 class="fw-bold">VPS Hosting</h4>
+                                    <p class="mb-0">Eirmod erat dolor amet est clita lorem erat justo rebum elitr eos</p>
+                                </div>
+                                
+                                <div class="p-4">
+                                    
+                                        {{-- <a href="/public/" > --}}                                        
+                                            {{-- <p class="border-bottom pb-3"> --}}
+                                                <iframe src="{{ asset('template/Data Surat 28 November 2023.pdf') }}" width="100%" height="400px" style="overflow: auto;" frameborder="0"></iframe>
+                                                {{-- <iframe src="{{ asset('template/Data Surat 28 November 2023.pdf') }}" width="100%" height="400px" frameborder="0"></iframe> --}}
+                                            {{-- </p> --}}
+                                        {{-- </a> --}}
+                                </div>
+
+                                <div class="text-center border-bottom p-4">
+                                    <p class="text-primary mb-1">Latest Offer - <strong>Save 30%</strong></p>
+                                </div>
                             </div>
-
                         </div>
-                        
-                        <div class="col-lg-auto mb-4">
-                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{{ asset ('template/assets/img/about.png')}}">
-                        </div>
-
-                        <a href="{{ route ('list-materi')}}" class="d-flex align-items-center justify-content-center">
-                            <button class="btn btn-secondary animated slideInLeft">
-                                Next        
-                            </button>
-                        </a>
                     </div>
                 </div>
             </div>

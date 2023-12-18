@@ -29,7 +29,7 @@
               </tr>
             </thead>
             <tbody class="table-border-bottom-0">
-              @forelse ($materi as $item)
+              @foreach ($materi as $item)
                 <tr>
                   <td style="width: 20px">
                       {{$loop->iteration}}
@@ -56,13 +56,7 @@
                     </div>
                   </td>
                 </tr>
-              @empty
-                <tr>
-                    <td colspan="4" class="text-center">
-                        <p>Belum Ada Data!</p>
-                    </td>
-                </tr>
-              @endforelse
+              @endforeach
             </tbody>
           </table>
         </div>

@@ -24,7 +24,7 @@
               </tr>
             </thead>
             <tbody class="table-border-bottom-0">
-              @forelse ($pengunjung as $item)
+              @foreach ($pengunjung as $item)
                 <tr>
                   <td>
                       {{$loop->iteration}}
@@ -42,13 +42,7 @@
                       {{$item->age}}
                   </td>
                 </tr>
-              @empty
-                <tr>
-                    <td colspan="5" class="text-center">
-                        <p>Belum Ada Data!</p>
-                    </td>
-                </tr>
-              @endforelse
+              @endforeach
             </tbody>
           </table>
         </div>

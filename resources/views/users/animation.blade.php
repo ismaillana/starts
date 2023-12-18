@@ -60,7 +60,7 @@
                         </div>
                         
                         <div class="col-lg-auto mb-4">
-                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{{ asset ('template/assets/img/about.png')}}">
+                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{{ asset ('template/assets/img/animasi.png')}}" style="width: 400px">
                         </div>
 
                         <a href="{{ route ('list-materi')}}" class="d-flex align-items-center justify-content-center">

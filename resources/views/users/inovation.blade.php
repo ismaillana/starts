@@ -65,7 +65,7 @@
                                 </div>
                                 
                                 <div class="p-4">
-                                    <iframe src="{{ asset('template/Data Surat 28 November 2023.pdf') }}" width="100%" height="400px" style="overflow: auto;" frameborder="0"></iframe>
+                                    <iframe src="{{ asset('template/INNOVATION.pdf') }}" width="100%" height="400px" style="overflow: auto;" frameborder="0"></iframe>
                                 </div>
 
                                 <div class="text-center border-bottom p-4">

@@ -69,7 +69,7 @@
                                 </div>
 
                                 <div class="text-center border-bottom p-4">
-                                    <a class="btn btn-secondary px-4 py-2 mb-3" href="#">Quiz</a>
+                                    <a class="btn btn-secondary px-4 py-2 mb-3" href="https://quizizz.com/join?gc=80745236">Quiz</a>
                                     <h3 class="text-primary mb-1">Thank You'</h3>
                                 </div>
                             </div>

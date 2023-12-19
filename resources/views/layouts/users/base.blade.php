@@ -112,7 +112,7 @@
                                 <div class="bg-light rounded text-center p-4">
                                     <i class="fa fa-users fa-2x text-primary mb-2"></i>
                                     <h2 class="mb-1" data-toggle="counter-up">{{$materi}}</h2>
-                                    <p class="mb-0">Materi</p>
+                                    <p class="mb-0">Problem</p>
                                 </div>
                             </div>
                         </div>

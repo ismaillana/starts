@@ -17,7 +17,7 @@
             <thead class="table-light">
               <tr>
                 <th>#</th>
-                <th>Nama</th>
+                <th>Name</th>
                 <th>Email</th>
                 <th>Gender</th>
                 <th>Usia</th>

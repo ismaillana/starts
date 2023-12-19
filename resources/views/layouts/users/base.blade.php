@@ -66,12 +66,12 @@
             </nav> --}}
 
             <div class="container-xxl py-5 bg-primary hero-header mb-5">
-                <div class="container my-5 px-lg-5">
+                <div class="container my-5 px-lg-5 ">
                     <div class="row g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid animated zoomIn" src="{{ asset('template/assets/img/logo sekolah.png')}}" alt="" width="400px">
+                        <div class="col-lg-6 text-center mb-5">
+                            <img class="img-fluid animated zoomIn" src="{{ asset('template/assets/img/logo sekolah.png')}}" alt="" width="250px">
                         </div>
-                        <div class="col-lg-6 pt-5 text-center text-lg-start">
+                        <div class="col-lg-6 text-center text-lg-start mb-5">
                             <h3 class="display-4 text-white animated slideInLeft">WELCOME TO "STARS"</h3>
                             <h5 class="text-white animated slideInLeft mb-4">"Sustainable Health Action For Society"</h5>
                             <!-- <h1 class="text-white mb-4 animated slideInLeft">
@@ -95,13 +95,17 @@
                         <div class="section-title position-relative mb-4 pb-4">
                             <h1 class="mb-2">Welcome to STARS</h1>
                         </div>
-                        <p class="mb-4">"Sustainable Health Action For Society" is Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo magna dolore erat amet</p>
+                        <p class="mb-4">"Sustainable Health Action For Society"
+                            is a website that provide and education regarding knowledge about dental 
+                            and oral health utilise the rapid development of technology in the present time. 
+                            we hope that teenagers will be able to become real stars in reaching the SDGs 2030 achievement point.
+                        </p>
                         <div class="row g-3">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="bg-light rounded text-center p-4">
                                     <i class="fa fa-users fa-2x text-primary mb-2"></i>
                                     <h2 class="mb-1" data-toggle="counter-up">{{$user}}</h2>
-                                    <p class="mb-0">Pengunjung</p>
+                                    <p class="mb-0">Visitor</p>
                                 </div>
                             </div>
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">

@@ -41,11 +41,11 @@ class UserController extends Controller
             'age'          => 'required',
             'gender'       => 'required',
         ], [
-            'name.required'     => 'Nama Wajib Diisi',
-            'email.required'    => 'Alamat Email Wajib Diisi',
-            'email.email'       => 'Inputan Harus Berupa Alamat Email',
-            'age.required'      => 'Usia Wajib Diisi',
-            'gender.required'   => 'Jenis Kelamin Wajib Diisi',
+            'name.required'     => 'Name is required',
+            'email.required'    => 'Email address is required',
+            'email.email'       => 'Input must be an email address',
+            'age.required'      => 'Age is required',
+            'gender.required'   => 'Gender is required',
         ]);
 
         User::create([

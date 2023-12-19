@@ -69,6 +69,12 @@
                                 </div>
 
                                 <div class="text-center border-bottom p-4">
+                                    <p>access our innovation 
+                                        <a href="https://docs.google.com/document/d/1FgOu75Y67JdHi75M98ZauS-l-nRtvxIP/edit?usp=drive_link&ouid=106888281028153976701&rtpof=true&sd=true">
+                                            Click here
+                                        </a>
+                                    </p>
+
                                     <a class="btn btn-secondary px-4 py-2 mb-3" href="https://quizizz.com/join?gc=80745236" target="_blank" >Quiz</a>
                                     <h3 class="text-primary mb-1">Thank You'</h3>
                                 </div>

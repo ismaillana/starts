@@ -46,13 +46,20 @@
                         <i class="bx bx-dots-vertical-rounded"></i>
                       </button>
                       <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ route('materi.edit', $item->id) }}"
-                          ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                        >
-                        <a class="dropdown-item" href="javascript:void(0);"
-                          ><i class="bx bx-trash me-1"></i> Delete</a
-                        >
-                      </div>
+                        <a class="dropdown-item" href="{{ route('materi.edit', $item->id) }}">
+                            <i class="bx bx-edit-alt me-1"></i> Edit
+                        </a>
+                    
+                        <!-- Form untuk menghapus data -->
+                        <form action="{{ route('materi.destroy', $item->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                    
+                            <button type="submit" class="dropdown-item" onclick="return confirm('Are you sure you want to delete this item?')">
+                                <i class="bx bx-trash me-1"></i> Delete
+                            </button>
+                        </form>
+                    </div>
                     </div>
                   </td>
                 </tr>

@@ -39,8 +39,8 @@ class MateriController extends Controller
             'title'           => 'required',
             'link'            => 'required',
         ], [
-            'title.required'       => 'Title Wajib Diisi',
-            'link.required'        => 'Link Wajib Diisi',
+            'title.required'       => 'Title is required',
+            'link.required'        => 'Link is required',
         ]);
 
         Materi::create([
@@ -48,7 +48,7 @@ class MateriController extends Controller
             'link'  => $request->link
         ]);
 
-        return redirect()->route('materi.index')->with('success', 'Data Berhasil Ditambahkan');
+        return redirect()->route('materi.index');
     }
 
     /**
@@ -80,8 +80,8 @@ class MateriController extends Controller
             'title'           => 'required',
             'link'            => 'required',
         ], [
-            'title.required'       => 'Title Wajib Diisi',
-            'link.required'        => 'Link Wajib Diisi',
+            'title.required'       => 'Title is required',
+            'link.required'        => 'Link is required',
         ]);
 
         $data = [
@@ -91,7 +91,7 @@ class MateriController extends Controller
 
         Materi::where('id', $id)->update($data);
 
-        return redirect()->route('materi.index')->with('success', 'Data Berhasil Diedit');   
+        return redirect()->route('materi.index');   
     }
 
     /**
@@ -103,6 +103,6 @@ class MateriController extends Controller
 
         $materi->delete();
 
-        return response()->json(['status' => 'Data Berhasil Dihapus']);
+        return redirect()->back();
     }
 }

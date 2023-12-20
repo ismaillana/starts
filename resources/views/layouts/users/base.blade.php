@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{{ asset ('template/assets/img/about.png')}}">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{{ asset ('template/assets/img/Desain tanpa judul.png')}}" style="widows: 500px">
                     </div>
                 </div>
             </div>
